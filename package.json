@@ -7,7 +7,7 @@
     "serverless"
   ],
   "repository": {
-    "url": "https://github.com/MrHermanns/chonkpepe",
+    "url": "https://github.com/connectshark/telegram-bot-vercel-serverless-template",
     "type": "git"
   },
   "author": {
