@@ -5,8 +5,12 @@ const bot = new TelegramBot(process.env.BOT_TOKEN as string)
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   try {
-    const { body } = req
-    if (!body.message) {
+    // Parse the body if needed
+    let body = req.body
+    if (typeof body === 'string') {
+      body = JSON.parse(body)
+    }
+    if (!body || !body.message) {
       res.status(204).send('')
       return
     }
